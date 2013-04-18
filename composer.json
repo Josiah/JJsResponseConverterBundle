@@ -1,6 +1,6 @@
 {
     "name": "jjs/phantom-response-bundle",
-    "description": "Uses PhantomJS to provide PDF and Image response formats",
+    "description": "Uses PhantomJS to provide PDF and Image response formats for Symfony 2",
     "license": "MIT",
     "authors": [
         {
@@ -8,9 +8,13 @@
             "email": "josiah@jjs.id.au"
         }
     ],
+    "autoload": {
+        "psr-0": {"JJs\\Bundle\\PhantomResponseBundle": ""}
+    },
+    "target-dir": "JJs/Bundle/PhantomResponseBundle",
     "minimum-stability": "dev",
     "require": {
+        "php": ">=5.4.0",
         "kriansa/h2p": "*"
-
     }
 }
