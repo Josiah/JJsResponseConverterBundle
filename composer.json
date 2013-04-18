@@ -1,0 +1,16 @@
+{
+    "name": "jjs/phantom-response-bundle",
+    "description": "Uses PhantomJS to provide PDF and Image response formats",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josiah",
+            "email": "josiah@jjs.id.au"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kriansa/h2p": "*"
+
+    }
+}
