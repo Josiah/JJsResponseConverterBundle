@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!--
+
+    KNP Snappy Converter Services
+
+    Provides service definitions which are then enabled and configured through
+    the semantic configuration of this bundle.
+
+    @author Josiah <josiah@jjs.id.au>
+
+-->
+<container
+    xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <!--
+            PDF Converter
+
+            Converts HTML responses to PDF documents using the Knp Snappy PDF
+            generator.
+        -->
+        <service id="response_converter.knp_snappy.pdf" class="JJs\Bundle\ResponseConverterBundle\Converter\KnpSnappyConverter">
+            <argument id="knp_snappy.pdf" type="service" on-invalid="ignore" />
+            <argument>pdf</argument>
+        </service>
+        <service id="response_converter.knp_snappy.pdf.subscriber" class="JJs\Bundle\ResponseConverterBundle\Response\ConverterSubscriber">
+            <tag name="kernel.event_subscriber" />
+            <argument id="response_converter.knp_snappy.pdf" type="service" />
+        </service>
+
+        <!--
+            Screenshot Converter
+
+            Converts HTML responses to screenshot images using the Knp Snappy
+            screenshot generator.
+        -->
+        <service id="response_converter.knp_snappy.screenshot" class="JJs\Bundle\ResponseConverterBundle\Converter\KnpSnappyConverter">
+            <argument id="knp_snappy.image" type="service" on-invalid="ignore" />
+            <argument>screenshot</argument>
+        </service>
+        <service id="response_converter.knp_snappy.screenshot.subscriber" class="JJs\Bundle\ResponseConverterBundle\Response\ConverterSubscriber">
+            <tag name="kernel.event_subscriber" />
+            <argument id="response_converter.knp_snappy.screenshot" type="service" />
+        </service>
+    </services>
+</container>
