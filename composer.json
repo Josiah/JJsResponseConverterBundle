@@ -14,7 +14,7 @@
     "target-dir": "JJs/Bundle/PhantomResponseBundle",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "php": "~5.4",
         "kriansa/h2p": "*"
     }
 }
