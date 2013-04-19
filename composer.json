@@ -1,6 +1,7 @@
 {
-    "name": "jjs/phantom-response-bundle",
-    "description": "Uses PhantomJS to provide PDF and Image response formats for Symfony 2",
+    "name": "jjs/response-converter-bundle",
+    "description": "Provides automatic conversion of responses to various formats such as PDF",
+    "keywords": ["PDF", "PhantomJS"],
     "license": "MIT",
     "authors": [
         {
@@ -9,12 +10,11 @@
         }
     ],
     "autoload": {
-        "psr-0": {"JJs\\Bundle\\PhantomResponseBundle": ""}
+        "psr-0": {"JJs\\Bundle\\ResponseConverterBundle": ""}
     },
-    "target-dir": "JJs/Bundle/PhantomResponseBundle",
+    "target-dir": "JJs/Bundle/ResponseConverterBundle",
     "minimum-stability": "dev",
     "require": {
-        "php": "~5.4",
-        "kriansa/h2p": "*"
+        "php": "~5.4"
     }
 }

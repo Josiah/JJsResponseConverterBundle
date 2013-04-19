@@ -1,6 +1,12 @@
-# Phantom Response Bundle
+# Response Converter Bundle
 
-Automatically transform your HTML responses into PDF documents using [PhantomJS](http://phantomjs.org).
+Automatically transform your responses into different formats.
+
+## PDF Generation
+
+This bundle facilitates automatic pdf generation through html to pdf conversions using the following converters:
+
+ - [H2P](https://github.com/kriansa/h2p) HTML to PDF conversion using [PhantomJS](http://phantomjs.org)
 
 ## v1.0 Todo List
 
